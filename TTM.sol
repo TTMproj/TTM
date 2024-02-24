@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
 
 contract TTM is ERC20, ERC20Burnable, Ownable, ERC20Permit, ERC20Capped {
-    uint256 public cappacity = 1000000000000 * 10**(decimals());
+    uint256 public capacity = 1000000000000 * 10**(decimals());
 
     constructor(address initialOwner) 
         ERC20("To The Moon", "TTM")
@@ -16,7 +16,7 @@ contract TTM is ERC20, ERC20Burnable, Ownable, ERC20Permit, ERC20Capped {
         ERC20Permit("To The Moon")
         ERC20Capped(cappacity)
     {
-        _mint(initialOwner, cappacity);
+        _mint(initialOwner, capacity);
     }
 
     // The following functions are overrides required by Solidity.
